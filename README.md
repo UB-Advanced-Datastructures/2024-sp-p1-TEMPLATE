@@ -1,7 +1,9 @@
 # P1 - Binary Search (On Disk)
 
 **Deadline**: Sunday, Feb 11; 11:59 PM
+
 **Accept Assignment**: https://classroom.github.com/a/hsxNiYoj
+
 **Submit Assignment**: https://autolab.cse.buffalo.edu/courses/cse410-s24/assessments/P1-Binary
 
 In this assignment, we will implement binary search using O(1) memory using file handles.
