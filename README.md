@@ -47,6 +47,7 @@ You may find the following documentation useful:
 * [The Rust Book](https://doc.rust-lang.org/book/)
 * [std::fs::File](https://doc.rust-lang.org/std/fs/struct.File.html)
 * [std::fs::Metadata](https://doc.rust-lang.org/std/fs/struct.Metadata.html)
+* [size_of::&lt;datatype&gt;](https://doc.rust-lang.org/std/mem/fn.size_of.html)
 
 ----
 
@@ -55,6 +56,10 @@ The following utility methods are provided for your convenience:
 #### `buffer_to_record(buffer)`
 
 Given a buffer, exactly the size of one record, this function will transmute it into a Record object.
+
+#### `size_of::<Record>`()
+
+Return the number of bytes needed to store a single record (part of Rust's standard library)
 
 ----
 
@@ -106,3 +111,20 @@ Note the bound on memory.
 - Memory: O(1)
 - IO: O(log_2(N))
 
+----
+
+## Additional Notes
+
+Example test data is provided in the accompanying file `test_data.dat`.  The very first key/value pair should be: 
+```
+37: ['w', 'u', 's', 'h', 'b', 'u', 'i', 'j', 'q', 'b', 'w', 'q', 'w', 't', 'w', 'r', 'i', 'c', 'a', 'a']
+```
+
+If you need additional testing data, you can run:
+```
+cargo run --bin generate
+```
+or
+```
+cargo run --bin generate number_of_records
+```
